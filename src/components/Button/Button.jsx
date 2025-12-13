@@ -2,9 +2,9 @@ import "./Button.css";
 
 const Button = ({ children }) => {
   return (
-    <a href="#" className="button">
+    <button type="button" className="button">
       {children}
-    </a>
+    </button>
   );
 };
 
