@@ -12,19 +12,19 @@ export const useCart = () => {
     [cart]
   );
 
-  const addToCart = (product) => {
+  const addToCart = (event) => {
     setCart((prev) => {
-      const exists = prev.find((item) => item.id === product.id);
+      const exists = prev.find((item) => item.id === event.detail.id);
 
       if (exists) {
         return prev.map((item) =>
-          item.id === product.id
+          item.id === event.detail.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
 
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...event.detail, quantity: 1 }];
     });
   };
 
@@ -48,6 +48,14 @@ export const useCart = () => {
     localStorage.setItem("cart-storage", JSON.stringify(cart));
     localStorage.setItem("total-price", JSON.stringify(totalPrice));
   }, [cart, totalPrice]);
+
+  useEffect(() => {
+    window.addEventListener("add-to-cart", addToCart);
+
+    return () => {
+      window.removeEventListener("add-to-cart", addToCart);
+    };
+  }, []);
 
   return {
     cart,
