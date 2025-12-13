@@ -12,6 +12,7 @@
   padding-block-end: 16px;
 
   background-color: hsl(253, 82%, 98%);
+  border: 1px solid hsl(249, 24%, 80%);
   border-radius: 0.5rem;
   overflow: hidden;
 
@@ -54,6 +55,7 @@ p {
 
   font-size: 18px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .product-card__desc {
