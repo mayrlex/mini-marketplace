@@ -1,6 +1,8 @@
 .button {
   padding: 8px 24px;
 
+  border: none;
+  outline: none;
   border-radius: 0.5em;
   text-decoration: none;
   font-size: 18px;
@@ -12,8 +14,14 @@
 
 .button:hover {
   background-color: hsl(249, 24%, 36%);
+
+  cursor: pointer;
 }
 
 .button:active {
   background-color: hsl(249, 24%, 30%);
+}
+
+.button:focus-visible {
+  outline: 4px solid hsla(249, 24%, 24%, 0.5);
 }
