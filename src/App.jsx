@@ -1,22 +1,11 @@
-import { fetchProducts } from "./api";
-
-const products = await fetchProducts();
+import { ProductList } from "./components/ProductList/ProductList";
 
 const App = () => {
-
   return (
     <>
-      <div>
-        {products.map(product => (
-          <div key={product.id}>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>${product.price}</p>
-          </div>
-        ))}
-      </div>
+      <ProductList />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
