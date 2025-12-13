@@ -8,7 +8,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.app {
+body {
   display: grid;
   column-gap: 24px;
   padding-block: 32px;
@@ -21,13 +21,13 @@ body {
   }
 }
 
-.app__product-list {
+.app-product-list {
   @media (min-width: 768px) {
     grid-column: span 8;
   }
 }
 
-.app__cart {
+#root {
   @media (min-width: 768px) {
     grid-column: span 4;
   }

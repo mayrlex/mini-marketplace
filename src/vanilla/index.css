@@ -1,0 +1,30 @@
+@import "../components/ProductList/ProductList.css";
+@import "../components/ProductCard/ProductCard.css";
+
+.button {
+  padding: 8px 24px;
+
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: hsl(249, 24%, 44%);
+  color: hsl(264, 71%, 99%);
+
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 250ms;
+}
+
+.button:hover {
+  background-color: hsl(249, 24%, 36%);
+
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: hsl(249, 24%, 30%);
+}
+
+.button:focus-visible {
+  outline: 4px solid hsla(249, 24%, 24%, 0.5);
+}
