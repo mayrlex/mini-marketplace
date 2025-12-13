@@ -1,6 +1,7 @@
+import { cloneElement } from "react";
 import "./ProductCard.css";
 
-const ProductCard = ({ product, children }) => {
+const ProductCard = ({ product, children, onAdd }) => {
   return (
     <div className="product-card">
       <div className="product-card__thumb">
@@ -16,7 +17,9 @@ const ProductCard = ({ product, children }) => {
           <span className="product-card__price-value">${product.price}</span>
         </p>
 
-        {children}
+        {cloneElement(children, {
+          onClick: () => onAdd(product),
+        })}
       </div>
     </div>
   );
