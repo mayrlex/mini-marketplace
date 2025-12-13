@@ -6,11 +6,11 @@ import "./ProductList.css";
 
 const products = await fetchProducts();
 
-const ProductList = ({ className = "" }) => {
+const ProductList = ({ className = "", onAdd }) => {
   return (
     <div className={`product-list ${className}`}>
       {products.map((product, index) => (
-        <ProductCard key={index} product={product}>
+        <ProductCard key={index} product={product} onAdd={onAdd}>
           <Button>Add to cart</Button>
         </ProductCard>
       ))}

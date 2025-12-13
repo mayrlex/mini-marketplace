@@ -7,3 +7,28 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
+
+body {
+  display: grid;
+  column-gap: 24px;
+  padding-block: 32px;
+  padding-inline: 16px;
+
+  background-color: hsl(250, 95%, 93%);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.app-product-list {
+  @media (min-width: 768px) {
+    grid-column: span 8;
+  }
+}
+
+#root {
+  @media (min-width: 768px) {
+    grid-column: span 4;
+  }
+}

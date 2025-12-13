@@ -1,3 +1,6 @@
+@import "../components/ProductList/ProductList.css";
+@import "../components/ProductCard/ProductCard.css";
+
 .button {
   padding: 8px 24px;
 

@@ -1,10 +1,10 @@
 import "./Button.css";
 
-const Button = ({ children }) => {
+const Button = ({ children, ...props }) => {
   return (
-    <a href="#" className="button">
+    <button type="button" className="button" {...props}>
       {children}
-    </a>
+    </button>
   );
 };
 
