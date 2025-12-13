@@ -2,6 +2,7 @@
   display: grid;
   row-gap: 16px;
   align-content: start;
+  min-block-size: calc(100dvh - 64px);
 }
 
 .cart__title {
