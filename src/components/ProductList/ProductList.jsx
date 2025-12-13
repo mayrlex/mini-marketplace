@@ -1,14 +1,18 @@
-import { ProductCard } from "../ProductCard/ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 import { fetchProducts } from "./api";
+
+import "./ProductList.css";
 
 const products = await fetchProducts();
 
-export const ProductList = () => {
+const ProductList = ({ className = "" }) => {
   return (
-    <div>
+    <div className={`product-list ${className}`}>
       {products.map((product, index) => (
         <ProductCard key={index} product={product} />
       ))}
     </div>
   );
 };
+
+export default ProductList;
