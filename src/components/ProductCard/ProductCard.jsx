@@ -9,7 +9,6 @@ const ProductCard = ({ product, children, onAdd }) => {
       </div>
 
       <p className="product-card__title">{product.title}</p>
-      <p className="product-card__desc">{product.description}</p>
 
       <div className="product-card__footer">
         <p className="product-card__price">

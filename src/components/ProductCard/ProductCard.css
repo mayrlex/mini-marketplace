@@ -2,14 +2,10 @@
   --product-card-padding: 16px;
 
   display: grid;
-  grid-template-rows:
-    auto
-    2.5em
-    1fr
-    auto;
   row-gap: 16px;
   height: 100%;
   padding-block-end: 16px;
+  align-self: flex-start;
 
   background-color: hsl(253, 82%, 98%);
   border: 1px solid hsl(249, 24%, 80%);
@@ -58,19 +54,11 @@ p {
   text-transform: uppercase;
 }
 
-.product-card__desc {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  padding-inline: var(--product-card-padding);
-}
-
 .product-card__footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: end;
+  align-self: end;
   padding-inline: var(--product-card-padding);
 }
 
