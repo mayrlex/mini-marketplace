@@ -6,7 +6,7 @@ const CartList = ({ className = "", cart = [], totalPrice, onRemove }) => {
   return (
     <div className={`cart ${className}`}>
       {!cart.length ? (
-        <p className="cart__title cart__title--empty">Cart is emty</p>
+        <p className="cart__title cart__title--empty">Cart is empty</p>
       ) : (
         <>
           <p className="cart__title">Cart</p>
